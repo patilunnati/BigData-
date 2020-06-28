@@ -4,12 +4,12 @@
 
 # 2) Downloading and unziping 
 
-<img src ="/images/2.png" width="500">
+<img src ="/images/4download file.jpg" width="500">
 
-# Enter the following command to view the usage of hdfs dfs:
-## --> hdfs dfs
+# Enter the following command to unzip:
+## --> unzip   labs.zip
 
-<img src ="/images/3.png" width="500">
+<img src ="/images/unzip.jpg" width="500">
 
 # 3) Create a Directory in HDFS
 ## a. Enter the following -ls command to view the contents of the user’s root directory
@@ -18,8 +18,6 @@
 ## You do not have any files in /user/root yet, so no output is displayed.
 ## Run the -ls command again, but this time specify the root HDFS folder:
 ## --> hdfs dfs -ls /
-
-<img src ="/images/4.png" width="500">
 
 # Important
 ## Notice how adding the / in the -ls command caused the contents of the root
@@ -31,7 +29,7 @@
 # c. Verify that the folder was created successfully:
 ## --> hdfs dfs -ls
 
-<img src ="/images/5.png" width="500">
+<img src ="/images/3mkdir & rm.jpg" width="500">
 
 # d. Create a couple of subdirectories for test:
 ## hdfs dfs -mkdir test/test1
@@ -43,7 +41,7 @@
 ## use -ls -R:
 ## --> hdfs dfs -ls -R
 
-<img src ="/images/6.png" width="500">
+<img src ="/images/5 rmdir.jpg" width="500">
 
 # 3) Delete a Directory
 ## a. Delete the test2 folder (and recursively, its subcontents) using the -rm -R command:
@@ -51,7 +49,7 @@
 ## b. Now run the -ls -R command:
 ## --> hdfs dfs -ls -R
 
-<img src ="/images/7.png" width="500">
+<img src ="/images/5 rmdir.jpg" width="500">
 
 # Note
 ## Notice Hadoop created a .Trash folder for the root user and moved the deleted
@@ -59,7 +57,7 @@
 ## of time.
 # 4) Upload a File to HDFS
 
-<img src ="/images/8.png" width="500">
+<img src ="/images/6 cdlabs.jpg" width="500">
 
 ## a. Now let’s put a file into the test folder. Change directories to
 ## You can also use the ‐tail command to view the end of a file:
@@ -68,7 +66,7 @@
 ## a. Now copy the data.txt file in test to another folder in HDFS using the -cp command:
 ## --> hdfs dfs -cp test/data.txt test/test1/data2.txt
 
-<img src ="/images/9.png" width="500">
+<img src ="/images/7copyandrm.jpg" width="500">
 
 ## c. Now delete the data2.txt file using the -rm command:
 ## --> hdfs dfs -rm test/test1/data2.txt
@@ -76,12 +74,12 @@
 ## a. You can use the -cat command to view text files in HDFS. Enter the following command to view the contents of data.txt:
 ## --> hdfs dfs -cat test/data.txt
 
-<img src ="/images/10.png" width="500">
+<img src ="/images/11rm&cat.jpg" width="500">
 
 ## b. You can also use the ‐tail command to view the end of a file:
 ## --> hdfs dfs -tail test/data.txt
 
-<img src ="/images/11.png" width="500">
+<img src ="/images/8tail.jpg" width="500">
 
 ## Notice the output this time is only the last 20 rows of data.txt.
 # 7) Getting a File from HDFS.
@@ -90,20 +88,23 @@
 ## --> cd /tmp
 ## --> ls data*
 
-<img src ="/images/12.png" width="500">
+<img src ="/images/10getmerged.jpg" width="500">
 
 # 8) The getmerge Command
 ## a. Put the file labs/demos/small_blocks.txt into the test folder in
 ## HDFS. You should now have two files in test: data.txt and small_blocks.txt.
 
-<img src ="/images/13.png" width="500">
+<img src ="/images/9put.jpg" width="500">
 
 ## b. Run the following getmerge command:
 ## --> hdfs dfs -getmerge test /tmp/merged.txt
 
-<img src ="/images/14.png" width="500">
+<img src ="/images/10getmerged.jpg" width="500">
 
 ## c. What did the previous command do? Did you open the file merged.txt to see what happened?
 ## Answer: The two files that were in the test folder in HDFS were merged into a
 ## single file and stored on the local file system.
+
+# blocksize
+<img src ="/images/11blocksize.jpg" width="500">
 
