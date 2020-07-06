@@ -1,6 +1,6 @@
 # 1 ) Import the Table into HDFS
 
-<img src =images/Lab3.1/1connect.jpg" width="1000">
+<img src ="images/Lab3.1/1connect.jpg" width="1000">
 
 # 2 ) Verify the Import
 
